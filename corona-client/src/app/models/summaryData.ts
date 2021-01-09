@@ -16,15 +16,15 @@ export class Global {
 }
 
 export class Countries {
-   Country: string;
-   CountryCode: string;
-   Slug: string;
-   NewConfirmed: number;
-   TotalConfirmed: number;
-   NewDeaths: number;
-   TotalDeaths: number;
-   NewRecovered: number;
-   TotalRecovered: number;
+   country: string;
+   countryCode: string;
+   slug: string;
+   newConfirmed: number;
+   totalConfirmed: number;
+   newDeaths: number;
+   totalDeaths: number;
+   newRecovered: number;
+   totalRecovered: number;
    date: Date;
 }
 

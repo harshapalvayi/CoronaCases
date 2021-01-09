@@ -1,6 +1,42 @@
 
-<div class="container mt-5">
-  <div class="flex-row m-5">
+<div class="container-fluid">
+  <div class="row pt-2" [hidden]="(loader$ | async)">
+    <div class="row text-center my-3">
+      <h3 class="mx-5"> Global Pandemic Corona Cases</h3>
+    </div>
     <ngx-charts-pie-grid [results]="dashboardData"></ngx-charts-pie-grid>
   </div>
+
+  <div class="row mt-2">
+    <div class="container align-content-center">
+      <form [formGroup]="nationForm" (ngSubmit)="onSelection()">
+        <div class="d-flex flex-row align-items-center flex-wrap justify-content-around">
+          <div *ngIf="globalData">
+            <label><b>Country</b>
+              <p-dropdown  class="ml-2" [options]="countries"
+                           [appendTo]="'body'"
+                           formControlName="country"
+                           placeholder="select country">
+              </p-dropdown>
+            </label>
+
+            <button pButton type="button" label="Check"
+                    class="ml-2 my-2 p-button-rounded"
+                    (click)="onSelection()" [disabled]="nationForm.invalid" >
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="container-fluid mt-2" *ngIf="countryData">
+      <ngx-charts-number-card [results]="countryData">
+      </ngx-charts-number-card>
+    </div>
+  </div>
+</div>
+
+<div class="loaderPosition">
+  <p-progressSpinner [hidden]="(loader$ | async) === false">
+  </p-progressSpinner>
 </div>

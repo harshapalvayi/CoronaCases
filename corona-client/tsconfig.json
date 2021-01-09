@@ -6,6 +6,7 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "skipLibCheck": true,
     "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -17,16 +18,16 @@
     "lib": [
       "es2018",
       "dom"
-    ]
-  },
-  "paths": {
-    "@features/*": ["src/app/features/*"],
-    "@models/*": ["src/app/models/*"],
-    "@services/*":["src/app/services/*"],
-    "@core/*": ["src/app/core/*"],
-    "@app/*": ["src/app/*"],
-    "@shared/*": ["src/app/shared/*"],
-    "@assets/*": ["src/app/assets/*"]
+    ],
+    "paths": {
+      "@features/*": ["src/app/features/*"],
+      "@models/*": ["src/app/models/*"],
+      "@services/*":["src/app/services/*"],
+      "@core/*": ["src/app/core/*"],
+      "@app/*": ["src/app/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@assets/*": ["src/app/assets/*"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

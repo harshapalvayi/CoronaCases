@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import {DashboardComponent} from './dashboard.component';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {PrimengModule} from '@shared/primeng.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,8 +13,11 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule,
-    NgxChartsModule
+    PrimengModule,
+    NgxChartsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    DashboardRoutingModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

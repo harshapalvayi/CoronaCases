@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {CoreModule} from '@core/core.module';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CoreModule,
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule

@@ -1,0 +1,9 @@
+:host ::ng-deep .p-dropdown {
+  width: 20rem;
+}
+
+.loaderPosition {
+  position: fixed;
+  top: 30%;
+  left: 50%
+}
