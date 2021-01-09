@@ -1,13 +1,13 @@
 
 <div class="container-fluid">
-  <div class="row pt-2" [hidden]="(loader$ | async)">
-    <div class="row text-center my-3">
-      <h3 class="mx-5"> Global Pandemic Corona Cases</h3>
+  <div class="row my-2" [hidden]="(loader$ | async)">
+    <div class="row text-center">
+      <h3 class="mx-5 my-3"> Global Pandemic Corona Cases</h3>
     </div>
     <ngx-charts-pie-grid [results]="dashboardData"></ngx-charts-pie-grid>
   </div>
 
-  <div class="row mt-2">
+  <div class="row mt-2 mb-5">
     <div class="container align-content-center">
       <form [formGroup]="nationForm" (ngSubmit)="onSelection()">
         <div class="d-flex flex-row align-items-center flex-wrap justify-content-around">
@@ -29,7 +29,7 @@
       </form>
     </div>
 
-    <div class="container-fluid mt-2" *ngIf="countryData">
+    <div class="container-fluid my-3" *ngIf="countryData">
       <ngx-charts-number-card [results]="countryData">
       </ngx-charts-number-card>
     </div>
